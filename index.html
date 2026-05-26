@@ -1,99 +1,255 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALPHA Design & Print</title>
-  <style>
-    body{margin:0;font-family:Arial,sans-serif;background:#050505;color:white}
-    header{display:flex;justify-content:space-between;align-items:center;padding:25px 8%;background:#000}
-    .logo{font-size:26px;font-weight:800}.logo span{color:#22d3ee}
-    nav a{margin:0 12px;color:#ddd;text-decoration:none}
-    .btn{background:#22d3ee;color:#000;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:bold}
-    .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:90px 8%}
-    h1{font-size:58px;line-height:1.05}.cyan{color:#22d3ee}
-    p{color:#ccc;font-size:18px}
-    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:35px}
-    .big-a{font-size:140px;font-weight:900;background:linear-gradient(135deg,#22d3ee,#ec4899,#fb923c);-webkit-background-clip:text;color:transparent;text-align:center}
-    section{padding:65px 8%}
-    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .box{background:rgba(255,255,255,.06);border-radius:20px;padding:24px;border:1px solid rgba(255,255,255,.12)}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .placeholder{height:230px;border-radius:20px;background:linear-gradient(135deg,rgba(34,211,238,.25),rgba(236,72,153,.25),rgba(251,146,60,.25));display:flex;align-items:center;justify-content:center;font-weight:bold}
-    input,textarea{width:100%;padding:14px;margin:8px 0 16px;border-radius:14px;border:1px solid #333;background:#111;color:white}
-    footer{text-align:center;padding:35px;color:#999;border-top:1px solid #222}
-    @media(max-width:800px){header,.hero{display:block}.grid,.gallery{grid-template-columns:1fr}h1{font-size:40px}nav{margin:20px 0}}
-  </style>
-</head>
-<body>
-<header>
-  <div class="logo"><span>ALPHA</span> Design & Print</div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
-  <a class="btn" href="mailto:a.shahada1981@gmail.com">Jetzt anfragen</a>
-</header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<div class="hero">
-  <div>
-    <h1>Ihr Partner für moderne <span class="cyan">Beschriftung & Printdesign</span></h1>
-    <p>Professionelle Beschriftung, Druck und individuelle Designs für Textilien, Fahrzeuge, Werbeartikel, Metallplatten, Schlüsselanhänger und vieles mehr.</p>
-    <br>
-    <a class="btn" href="https://wa.me/4915237239073">WhatsApp schreiben</a>
-  </div>
-  <div class="card">
-    <div class="big-a">A</div>
-    <h2 style="text-align:center">ALPHA Design & Print</h2>
-  </div>
+<title>ALPHA Design & Print</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:#000;
+}
+
+.logo img{
+    height:90px;
+    border-radius:20px;
+}
+
+nav a{
+    margin:0 12px;
+    color:#ddd;
+    text-decoration:none;
+}
+
+.btn{
+    background:#22d3ee;
+    color:#000;
+    padding:12px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    padding:90px 8%;
+}
+
+h1{
+    font-size:58px;
+    line-height:1.05;
+}
+
+.cyan{
+    color:#22d3ee;
+}
+
+p{
+    color:#ccc;
+    font-size:18px;
+}
+
+.card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:28px;
+    padding:35px;
+}
+
+.big-a{
+    font-size:140px;
+    font-weight:900;
+    background:linear-gradient(135deg,#22d3ee,#ec4899,#fb923c);
+    -webkit-background-clip:text;
+    color:transparent;
+    text-align:center;
+}
+
+section{
+    padding:65px 8%;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.box{
+    background:rgba(255,255,255,.06);
+    border-radius:20px;
+    padding:24px;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.placeholder{
+    height:230px;
+    border-radius:20px;
+    background:linear-gradient(135deg,rgba(34,211,238,.25),rgba(236,72,153,.25),rgba(251,146,60,.25));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+input,textarea{
+    width:100%;
+    padding:14px;
+    margin:8px 0 16px;
+    border-radius:14px;
+    border:1px solid #333;
+    background:#111;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    color:#999;
+    border-top:1px solid #222;
+}
+
+@media(max-width:800px){
+    header,.hero{
+        display:block;
+    }
+
+    .grid,.gallery{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    nav{
+        margin:20px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="WhatsApp Image 2026-05-14 at 10.58.56.jpeg">
 </div>
 
-<section>
-  <div class="card">
-    <h2>Über uns</h2>
-    <p>ALPHA Design & Print steht für individuelle Beschriftung, hochwertige Drucklösungen und persönliche Beratung. Von Textilien bis Fahrzeugwerbung entsteht alles passend zum Kundenwunsch.</p>
-  </div>
+<nav>
+<a href="#services">Services</a>
+<a href="#gallery">Galerie</a>
+<a href="#contact">Kontakt</a>
+</nav>
+
+<a class="btn" href="#contact">Anfrage senden</a>
+
+</header>
+
+<section class="hero">
+
+<div>
+<h1>
+Kreative <span class="cyan">Designs</span><br>
+& hochwertige Druckkunst
+</h1>
+
+<p>
+Professionelles Design, Druck, Branding und Print-on-Demand Lösungen.
+</p>
+
+<br>
+
+<a class="btn" href="#gallery">Projekte ansehen</a>
+</div>
+
+<div class="card">
+<div class="big-a">A</div>
+</div>
+
 </section>
 
 <section id="services">
-  <h2>Unsere Services</h2>
-  <div class="grid">
-    <div class="box">T-Shirt Druck</div>
-    <div class="box">Auto-Beschriftung</div>
-    <div class="box">Metallplatten</div>
-    <div class="box">Schlüsselanhänger</div>
-    <div class="box">Tassen & Kissen</div>
-    <div class="box">Werbeartikel</div>
-    <div class="box">Individuelle Designs</div>
-    <div class="box">Business Branding</div>
-  </div>
+
+<h2>Unsere Services</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>Logo Design</h3>
+<p>Moderne Logos für Marken und Unternehmen.</p>
+</div>
+
+<div class="box">
+<h3>Druckservice</h3>
+<p>Flyer, Banner, Visitenkarten und mehr.</p>
+</div>
+
+<div class="box">
+<h3>Print-on-Demand</h3>
+<p>Produkte individuell und flexibel drucken.</p>
+</div>
+
+<div class="box">
+<h3>Social Media</h3>
+<p>Designs für Instagram, TikTok und Werbung.</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="gallery">
-  <h2>Galerie</h2>
-  <div class="gallery">
-    <div class="placeholder">Bild Platzhalter</div>
-    <div class="placeholder">Bild Platzhalter</div>
-    <div class="placeholder">Bild Platzhalter</div>
-  </div>
+
+<h2>Galerie</h2>
+
+<div class="gallery">
+
+<div class="placeholder">Projekt 1</div>
+<div class="placeholder">Projekt 2</div>
+<div class="placeholder">Projekt 3</div>
+
+</div>
+
 </section>
 
 <section id="contact">
-  <div class="card">
-    <h2>Kontakt</h2>
-    <p>Telefon: 015237239073</p>
-    <p>E-Mail: a.shahada1981@gmail.com</p>
 
-    <input placeholder="Ihr Name">
-    <input placeholder="E-Mail oder Telefon">
-    <textarea placeholder="Ihre Nachricht"></textarea>
-    <a class="btn" href="mailto:a.shahada1981@gmail.com">Anfrage senden</a>
-  </div>
+<h2>Kontakt</h2>
+
+<input type="text" placeholder="Name">
+<input type="email" placeholder="E-Mail">
+<textarea rows="5" placeholder="Nachricht"></textarea>
+
+<a class="btn" href="#">Absenden</a>
+
 </section>
 
 <footer>
-  © 2026 ALPHA Design & Print
+© 2026 ALPHA Design & Print
 </footer>
+
 </body>
 </html>
