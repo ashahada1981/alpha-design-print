@@ -27,14 +27,14 @@
 
     header {
       background: #000000;
-      padding: 18px 8%;
+      padding: 14px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #222;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
     }
 
     .logo-area {
@@ -44,14 +44,14 @@
     }
 
     .logo-area img {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       object-fit: contain;
       border-radius: 8px;
     }
 
     .logo-text {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       letter-spacing: 1px;
     }
@@ -63,7 +63,7 @@
     }
 
     nav a {
-      color: #cccccc;
+      color: #dddddd;
       transition: 0.3s;
     }
 
@@ -71,35 +71,55 @@
       color: #ffffff;
     }
 
-    .banner {
+    .hero {
+      width: calc(100% - 2cm);
+      max-width: 1600px;
+      margin: 1cm auto 0;
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid #222222;
+      background: #000000;
+    }
+
+    .hero img {
       width: 100%;
-      height: 420px;
-      background-image: linear-gradient(
-          rgba(0, 0, 0, 0.45),
-          rgba(0, 0, 0, 0.75)
-        ),
-        url("Banner.jpeg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      padding: 0 8%;
+      height: auto;
+      display: block;
     }
 
-    .banner-content {
-      max-width: 760px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.72),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.25)
+      );
+      pointer-events: none;
     }
 
-    .banner-content h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin-bottom: 20px;
+    .hero-content {
+      position: absolute;
+      left: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 720px;
+      z-index: 2;
     }
 
-    .banner-content p {
+    .hero-content h1 {
+      font-size: 52px;
+      line-height: 1.12;
+      margin-bottom: 18px;
+    }
+
+    .hero-content p {
       font-size: 20px;
-      color: #dddddd;
-      margin-bottom: 32px;
+      color: #eeeeee;
+      margin-bottom: 30px;
     }
 
     .button-row {
@@ -227,7 +247,7 @@
     @media (max-width: 900px) {
       header {
         flex-direction: column;
-        gap: 16px;
+        gap: 14px;
       }
 
       nav {
@@ -235,15 +255,31 @@
         justify-content: center;
       }
 
-      .banner {
-        height: auto;
-        min-height: 440px;
-        padding-top: 80px;
-        padding-bottom: 80px;
+      .hero {
+        width: calc(100% - 24px);
+        margin: 18px auto 0;
+        border-radius: 18px;
       }
 
-      .banner-content h1 {
-        font-size: 40px;
+      .hero-content {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        padding: 32px 24px;
+        background: #050505;
+      }
+
+      .hero::after {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 36px;
+      }
+
+      .hero-content p {
+        font-size: 17px;
       }
 
       .services-grid,
@@ -271,8 +307,10 @@
 
   <main>
 
-    <section class="banner">
-      <div class="banner-content">
+    <div class="hero">
+      <img src="Banner.jpeg" alt="ALPHA Design & Print Banner" />
+
+      <div class="hero-content">
         <h1>Design, Druck & Werbetechnik aus einer Hand</h1>
         <p>
           Moderne Gestaltung, hochwertige Druckprodukte und individuelle Lösungen
@@ -284,7 +322,7 @@
           <a class="btn btn-secondary" href="#galerie">Arbeiten ansehen</a>
         </div>
       </div>
-    </section>
+    </div>
 
     <section id="services">
       <h2 class="section-title">Unsere Services</h2>
